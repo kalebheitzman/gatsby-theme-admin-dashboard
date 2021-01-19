@@ -39,5 +39,6 @@ const StyledFooter = styled.footer`
 
     ${mq('tablet_up')} {
         padding: 0 2rem;
+        height: 80px;
     }
 `
