@@ -12,7 +12,7 @@ type InitialState = {
 }
 
 // initial state
-const initialState: InitialState = {
+export const initialState: InitialState = {
   darkMode: false,
   setDarkMode: null,
   toggle: false,

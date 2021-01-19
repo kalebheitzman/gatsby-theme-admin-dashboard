@@ -4,13 +4,6 @@ import React from "react"
 // import components
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {
-  faHome,
-  faLocationArrow,
-  faPlane,
-  // faPlaneDeparture,
-  faInfoCircle,
-} from "@fortawesome/free-solid-svg-icons"
 
 // import styles
 import styled from "@emotion/styled"
@@ -29,6 +22,10 @@ type NavigationProps = {
 
 export default ({ navigation }: NavigationProps) => {
 
+  if (!navigation) {
+    return <></>
+  }
+  
   return (
     <Navigation>
       <nav>
