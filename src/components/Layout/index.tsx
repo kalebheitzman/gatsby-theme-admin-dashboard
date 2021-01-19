@@ -12,6 +12,7 @@ import Toggle from "../Toggle"
 import Logo from "../Logo"
 import Topbar from "../Topbar"
 import Navigation from "../Navigation"
+import Footer from "../Footer"
 
 // import styles
 import "@fortawesome/fontawesome-svg-core/styles.css"
@@ -49,6 +50,7 @@ export const Layout = ({ children, title }) => {
       <Topbar />
       <Navigation navigation={navigation} />
       <Main>{children}</Main>
+      <Footer siteMetadata={siteMetadata} />
     </StyledLayout>
   )
 }
@@ -79,9 +81,10 @@ const StyledLayout = styled.div`
   ${mq("tablet_up")} {
     grid-template-areas:
       "toggle     logo    topbar"
-      "navigation main    main";
+      "navigation main    main"
+      "navigation footer  footer";
     grid-template-columns: 100px var(--sidebar-width) 1fr;
-    grid-template-rows: 80px 1fr;
+    grid-template-rows: 80px 1fr 80px;
   }
 `
 
@@ -93,6 +96,6 @@ export const Main = styled.main`
   overflow: hidden;
 
   ${mq("tablet_up")} {
-    height: calc(100vh - 80px);
+    height: calc(100vh - 160px);
   }
 `
