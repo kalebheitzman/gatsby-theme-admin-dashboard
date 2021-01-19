@@ -1,15 +1,16 @@
 // import libs
 import React, { useContext } from "react"
-import { config } from "@fortawesome/fontawesome-svg-core"
+import { config, library } from "@fortawesome/fontawesome-svg-core"
+import { fas } from "@fortawesome/free-solid-svg-icons"
 
 // import components
 import Context from "../Context/Context"
 import GlobalStyles from "./GlobalStyles"
-import Seo from "./Seo"
-import Toggle from "./Toggle"
-import Logo from "./Logo"
-import Topbar from "./Topbar"
-import Navigation from "./Navigation"
+import Seo from "../Seo"
+import Toggle from "../Toggle"
+import Logo from "../Logo"
+import Topbar from "../Topbar"
+import Navigation from "../Navigation"
 
 // import styles
 import "@fortawesome/fontawesome-svg-core/styles.css"
@@ -20,9 +21,25 @@ import mq from "../../utils/media"
 
 // fontawesome config
 config.autoAddCss = false
+library.add(fas)
 
 export const Layout = ({ children, title }) => {
   const { toggle } = useContext(Context)
+
+  const navigation = [
+    {
+      title: "Home",
+      to: "/",
+      icon: ["fas", "home"],
+      partiallyActive: false,
+    },
+    {
+      title: "About",
+      to: "/about/",
+      icon: ["fas", "info-circle"],
+      partiallyActive: true,
+    },
+  ]
 
   return (
     <StyledLayout className={toggle ? "toggled" : "untoggled"}>
@@ -31,11 +48,13 @@ export const Layout = ({ children, title }) => {
       <Toggle />
       <Logo />
       <Topbar />
-      <Navigation />
+      <Navigation navigation={navigation} />
       <Main>{children}</Main>
     </StyledLayout>
   )
 }
+
+export default Layout
 
 // StyledLayout component
 const StyledLayout = styled.div`

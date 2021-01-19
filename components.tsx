@@ -17,4 +17,4 @@
 // export { Context } from "./Context"
 // export { Provider } from "./Provider"
 
-export { Layout } from "./src/components/Layout/Layout"
+export { Layout } from "./src/components/Layout"

@@ -16,46 +16,25 @@ import {
 import styled from "@emotion/styled"
 import mq from "../../utils/media"
 
-export default () => {
-  const links = [
-    {
-      title: "Home",
-      to: "/",
-      icon: faHome,
-      partiallyActive: false,
-    },
-    {
-      title: "Tours",
-      to: "/tours/",
-      icon: faLocationArrow,
-      partiallyActive: true,
-    },
-    // {
-    //   title: "Flights",
-    //   to: "/flights/",
-    //   icon: faPlaneDeparture,
-    //   partiallyActive: true,
-    // },
-    {
-      title: "TBM9",
-      to: "/tbm9/",
-      icon: faPlane,
-      partiallyActive: true,
-    },
-    {
-      title: "About",
-      to: "/about/",
-      icon: faInfoCircle,
-      partiallyActive: true,
-    },
-  ]
+// types
+// type NavigationItem = {
+//   title: string,
+//   to: string,
+//   icon: any,
+//   partiallyActive: boolean
+// }
+type NavigationProps = {
+  navigation: any
+}
+
+export default ({ navigation }: NavigationProps) => {
 
   return (
     <Navigation>
       <nav>
         <ul>
-          {links.map(link => {
-            return <NavLink link={link} key={link.to} />
+          {navigation.map((item, key) => {
+            return <NavLink link={item} key={key} />
           })}
         </ul>
       </nav>
