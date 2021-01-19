@@ -1,0 +1,53 @@
+{
+  "name": "gatsby-theme-admin-dashboard",
+  "version": "1.0.0",
+  "main": "gatsby-config.js",
+  "author": "Kaleb Heitzman",
+  "license": "MIT",
+  "peerDependencies": {
+    "gatsby": "^2.30.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "prettier": "2.2.1"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kalebheitzman/gatsby-theme-admin-dashboard"
+  },
+  "bugs": {
+    "url": "https://github.com/kalebheitzman/gatsby-theme-admin-dashboard/issues"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.1.4",
+    "@emotion/styled": "^11.0.0",
+    "@fontsource/quattrocento-sans": "^4.1.0",
+    "@fontsource/work-sans": "^4.1.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/free-brands-svg-icons": "^5.15.2",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "axios": "^0.21.1",
+    "gatsby-background-image": "^1.4.0",
+    "gatsby-image": "^2.9.0",
+    "gatsby-plugin-emotion": "^5.2.0",
+    "gatsby-plugin-react-helmet-async": "^1.1.0",
+    "gatsby-plugin-sharp": "^2.12.2",
+    "gatsby-plugin-typography": "^2.10.0",
+    "gatsby-source-filesystem": "^2.9.1",
+    "gatsby-transformer-sharp": "^2.10.1",
+    "hamburger-react": "^2.4.0",
+    "react-helmet-async": "^1.0.7",
+    "react-switch": "^6.0.0",
+    "react-typography": "^0.16.19",
+    "typography": "^0.16.19"
+  }
+}
