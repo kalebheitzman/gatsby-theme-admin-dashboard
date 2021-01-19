@@ -3,10 +3,7 @@ import React from "react"
 
 // import components
 import Layout from "../Layout"
-
-// import styles
-// import styled from "@emotion/styled"
-import mq from "../../utils/media"
+import WideWrapper from "../Wrappers/WideWrapper"
 
 export const Home = () => {
 
@@ -14,14 +11,11 @@ export const Home = () => {
     <Layout
       title="Home"
     >
-      <h1>Home</h1>
+      <WideWrapper>
+        <h1>Home</h1>
+      </WideWrapper>
     </Layout>
   )
 }
 
 export default Home
-
-// error page component
-// const Error = styled.div`
-
-// `

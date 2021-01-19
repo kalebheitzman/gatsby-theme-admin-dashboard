@@ -1,5 +1,20 @@
+// load environment vars
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
+// libs
 const path = require("path")
+
 module.exports = {
+  /**
+   * Site Metadata
+   */
+  siteMetadata: {
+    title: process.env.GATSBY_SITE_TITLE,
+    siteUrl: process.env.GATSBY_SITE_URL,
+    description: process.env.GATSBY_SITE_DESCRIPTION
+  },
   plugins: [
     /**
      * Page Creator

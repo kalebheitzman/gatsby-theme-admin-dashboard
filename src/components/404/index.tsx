@@ -3,10 +3,7 @@ import React from "react"
 
 // import components
 import Layout from "../Layout"
-
-// import styles
-// import styled from "@emotion/styled"
-import mq from "../../utils/media"
+import WideWrapper from "../Wrappers/WideWrapper"
 
 export const ErrorPage = () => {
 
@@ -14,7 +11,9 @@ export const ErrorPage = () => {
     <Layout
       title="404"
     >
-      <h1>404 Page Not Found</h1>
+      <WideWrapper>
+        <h1>404 Page Not Found</h1>
+      </WideWrapper>
     </Layout>
   )
 }

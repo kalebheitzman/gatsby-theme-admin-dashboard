@@ -10,12 +10,14 @@ type Children = {
   children: any
 }
 
-export default ({ children }: Children) => {
-  return <Wrapper>{children}</Wrapper>
+export const WideWrapper = ({ children }: Children) => {
+  return <StyledWrapper>{children}</StyledWrapper>
 }
 
+export default WideWrapper
+
 // wrapper component
-const Wrapper = styled.div`
+const StyledWrapper = styled.div`
   height: calc(100vh - 160px);
   overflow-y: scroll;
   padding: 1rem;

@@ -1,18 +1,33 @@
 // import libs
-import React, { createContext } from "react"
+import { createContext } from "react"
 
-interface InitialState {
+// types
+type InitialState = {
   darkMode: boolean
   setDarkMode: any
   toggle: boolean
-  setToggle: any
+  setToggle: any,
+  navigation: any,
+  setNavigation: any
 }
 
+// initial state
 const initialState: InitialState = {
   darkMode: false,
   setDarkMode: null,
   toggle: false,
   setToggle: null,
+  navigation: [
+    {
+      title: "Home",
+      to: "/",
+      icon: ["fas", "home"],
+      partiallyActive: false,
+    },
+  ],
+  setNavigation: null
 }
 
-export default createContext(initialState)
+export const Context = createContext(initialState)
+
+export default Context

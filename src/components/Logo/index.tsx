@@ -8,12 +8,21 @@ import { Link } from "gatsby"
 import styled from "@emotion/styled"
 import mq from "../../utils/media"
 
-export default () => {
+// type
+type LogoProps = {
+  siteMetadata: {
+    title: string,
+    description: string,
+    url: string  
+  }
+}
+
+export default ({ siteMetadata }: LogoProps) => {
   return (
     <Logo>
       <h1>
         <Link to="/">
-          <span>SOCATA.io</span>
+          <span>{siteMetadata.title}</span>
         </Link>
       </h1>
     </Logo>

@@ -5,8 +5,10 @@ import React, { useState, useEffect } from "react"
 import Context from "./Context"
 
 export default ({ children }) => {
+
   const [darkMode, setDarkMode] = useState(false)
   const [toggle, setToggle] = useState(false)
+  const [navigation, setNavigation] = useState(null)
 
   // get initial dark mode
   useEffect(() => {
@@ -39,6 +41,8 @@ export default ({ children }) => {
         setDarkMode,
         toggle,
         setToggle,
+        navigation,
+        setNavigation
       }}
     >
       {children}

@@ -10,12 +10,14 @@ type Children = {
   children: any
 }
 
-export default ({ children }: Children) => {
-  return <Wrapper>{children}</Wrapper>
+export const Wrapper = ({ children }: Children) => {
+  return <StyledWrapper>{children}</StyledWrapper>
 }
 
-// wrapper component
-const Wrapper = styled.div`
+export default Wrapper
+
+// StyledWrapper component
+const StyledWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   border-top: 1px solid var(--border-color);

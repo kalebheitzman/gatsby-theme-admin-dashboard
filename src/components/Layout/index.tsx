@@ -1,5 +1,6 @@
 // import libs
 import React, { useContext } from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import { config, library } from "@fortawesome/fontawesome-svg-core"
 import { fas } from "@fortawesome/free-solid-svg-icons"
 
@@ -24,29 +25,27 @@ config.autoAddCss = false
 library.add(fas)
 
 export const Layout = ({ children, title }) => {
-  const { toggle } = useContext(Context)
+  const { toggle, navigation } = useContext(Context)
 
-  const navigation = [
-    {
-      title: "Home",
-      to: "/",
-      icon: ["fas", "home"],
-      partiallyActive: false,
-    },
-    {
-      title: "About",
-      to: "/about/",
-      icon: ["fas", "info-circle"],
-      partiallyActive: true,
-    },
-  ]
+  // static query for logo data
+  const { site: { siteMetadata } } = useStaticQuery(graphql`
+  query SiteLogoQuery {
+    site {
+      siteMetadata {
+        description
+        title
+        siteUrl
+      }
+    }      
+  }
+  `)
 
   return (
     <StyledLayout className={toggle ? "toggled" : "untoggled"}>
       <Seo title={title} />
       <GlobalStyles />
       <Toggle />
-      <Logo />
+      <Logo siteMetadata={siteMetadata} />
       <Topbar />
       <Navigation navigation={navigation} />
       <Main>{children}</Main>
