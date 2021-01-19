@@ -10,13 +10,13 @@ import mq from "../../utils/media"
 
 export const ErrorPage = () => {
 
-    return(
-        <Layout
-            title="404"
-        >
-                <h1>404 Page Not Found</h1>
-        </Layout>
-    )
+  return(
+    <Layout
+      title="404"
+    >
+      <h1>404 Page Not Found</h1>
+    </Layout>
+  )
 }
 
 export default ErrorPage
