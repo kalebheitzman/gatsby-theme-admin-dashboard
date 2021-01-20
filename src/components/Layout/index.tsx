@@ -43,7 +43,7 @@ export const Layout = ({ children, title }) => {
 
   return (
     <StyledLayout className={toggle ? "toggled" : "untoggled"}>
-      <Seo title={title} />
+      <Seo title={title} siteMetadata={siteMetadata} />
       <GlobalStyles />
       <Toggle />
       <Logo siteMetadata={siteMetadata} />

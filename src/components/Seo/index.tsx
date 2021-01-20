@@ -4,10 +4,10 @@ import React from "react"
 // import components
 import { Helmet } from "react-helmet-async"
 
-export default ({ title }) => {
+export default ({ title, siteMetadata }) => {
   return (
     <Helmet>
-      <title>{title} | Socata.io</title>
+      <title>{title} | {siteMetadata.title}</title>
     </Helmet>
   )
 }
