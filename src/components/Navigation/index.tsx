@@ -20,14 +20,14 @@ type NavigationProps = {
   navigation: any
 }
 
-export default ({ navigation }: NavigationProps) => {
+const Navigation = ({ navigation }: NavigationProps) => {
 
   if (!navigation) {
     return <></>
   }
   
   return (
-    <Navigation>
+    <StyledNavigation>
       <nav>
         <ul>
           {navigation.map((item, key) => {
@@ -35,9 +35,11 @@ export default ({ navigation }: NavigationProps) => {
           })}
         </ul>
       </nav>
-    </Navigation>
+    </StyledNavigation>
   )
 }
+
+export default Navigation
 
 // navlink component
 const NavLink = ({ link }) => (
@@ -59,7 +61,7 @@ const NavLink = ({ link }) => (
 )
 
 // navigation component
-const Navigation = styled.div`
+const StyledNavigation = styled.div`
   grid-area: navigation;
   background: var(--background-color);
 

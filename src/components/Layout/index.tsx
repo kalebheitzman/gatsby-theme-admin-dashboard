@@ -63,10 +63,11 @@ const StyledLayout = styled.div`
   grid-template-areas:
     "logo       logo       topbar"
     "main       main       main"
+    "footer     footer     footer"
     "sidebar    sidebar    sidebar"
     "navigation navigation toggle";
   grid-template-columns: 80px 1fr 90px;
-  grid-template-rows: 80px 1fr 0 80px;
+  grid-template-rows: 80px 1fr 80px 0 80px;
   height: 100vh;
   min-height: 100vh;
   min-height: -webkit-fill-available;
