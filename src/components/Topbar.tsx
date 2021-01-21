@@ -2,11 +2,11 @@
 import React from "react"
 
 // import components
-import DarkMode from "../DarkMode"
+import DarkMode from "./DarkMode"
 
 // import styles
 import styled from "@emotion/styled"
-import mq from "../../utils/media"
+import mq from "../utils/media"
 
 export default () => {
   return (

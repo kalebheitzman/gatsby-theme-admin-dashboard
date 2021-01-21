@@ -2,7 +2,7 @@
 import React, { useContext } from "react"
 
 // import components
-import Context from "../Context/Context"
+import Context from "./Context"
 import Switch from "react-switch"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons"

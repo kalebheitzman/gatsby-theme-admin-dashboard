@@ -3,10 +3,10 @@ import React, { useContext } from "react"
 
 // import styles
 import styled from "@emotion/styled"
-import mq from "../../utils/media"
+import mq from "../utils/media"
 
 // import components
-import Context from "../Context/Context"
+import Context from "./Context"
 import { Twirl as Hamburger } from "hamburger-react"
 
 export default () => {

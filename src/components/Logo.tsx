@@ -6,7 +6,7 @@ import { Link } from "gatsby"
 
 // import styles
 import styled from "@emotion/styled"
-import mq from "../../utils/media"
+import mq from "../utils/media"
 
 // type
 type LogoProps = {

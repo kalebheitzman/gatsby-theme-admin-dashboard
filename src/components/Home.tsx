@@ -2,8 +2,8 @@
 import React from "react"
 
 // import components
-import Layout from "../Layout"
-import WideWrapper from "../Wrappers/WideWrapper"
+import Layout from "./Layout"
+import WideWrapper from "./WideWrapper"
 
 export const Home = () => {
 

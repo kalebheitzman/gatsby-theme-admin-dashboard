@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 // import styles
 import styled from "@emotion/styled"
-import mq from "../../utils/media"
+import mq from "../utils/media"
 
 // types
 // type NavigationItem = {

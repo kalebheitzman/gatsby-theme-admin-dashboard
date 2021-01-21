@@ -2,11 +2,11 @@
 import React, { useContext } from "react"
 
 // import components
-import Context from "../Context/Context"
+import Context from "./Context"
 
 // import styles
 import { Global, css } from "@emotion/react"
-import mq from "../../utils/media"
+import mq from "../utils/media"
 
 // global styles
 export default () => {

@@ -5,21 +5,21 @@ import { config, library } from "@fortawesome/fontawesome-svg-core"
 import { fas } from "@fortawesome/free-solid-svg-icons"
 
 // import components
-import Context from "../Context/Context"
+import Context from "./Context"
 import GlobalStyles from "./GlobalStyles"
-import Seo from "../Seo"
-import Toggle from "../Toggle"
-import Logo from "../Logo"
-import Topbar from "../Topbar"
-import Navigation from "../Navigation"
-import Footer from "../Footer"
+import Seo from "./Seo"
+import Toggle from "./Toggle"
+import Logo from "./Logo"
+import Topbar from "./Topbar"
+import Navigation from "./Navigation"
+import Footer from "./Footer"
 
 // import styles
 import "@fortawesome/fontawesome-svg-core/styles.css"
 import "@fontsource/work-sans"
 import "@fontsource/quattrocento-sans"
 import styled from "@emotion/styled"
-import mq from "../../utils/media"
+import mq from "../utils/media"
 
 // fontawesome config
 config.autoAddCss = false
@@ -30,7 +30,7 @@ export const Layout = ({ children, title }) => {
 
   // static query for logo data
   const { site: { siteMetadata } } = useStaticQuery(graphql`
-  query SiteLogoQuery {
+  query SiteQuery {
     site {
       siteMetadata {
         description

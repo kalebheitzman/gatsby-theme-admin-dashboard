@@ -5,6 +5,11 @@ import React from "react"
 import { Helmet } from "react-helmet-async"
 
 export default ({ title, siteMetadata }) => {
+
+  if (!title || !siteMetadata) {
+    return <></>
+  }
+  
   return (
     <Helmet>
       <title>{title} | {siteMetadata.title}</title>

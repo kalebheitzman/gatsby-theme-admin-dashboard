@@ -3,7 +3,7 @@ import React from "react"
 
 // import styles
 import styled from "@emotion/styled"
-import mq from "../../utils/media"
+import mq from "../utils/media"
 
 // types
 type Children = {
@@ -11,21 +11,23 @@ type Children = {
 }
 
 export default ({ children }: Children) => {
-  return <Content>{children}</Content>
+  return <Sidebar>{children}</Sidebar>
 }
 
-// content component
-const Content = styled.div`
-  grid-area: content;
+// sidebar component
+const Sidebar = styled.div`
+  grid-area: sidebar;
   padding: 1rem;
 
   ${mq("tablet_up")} {
-    padding: 0;
+    padding: 2rem;
+    border-top: 1px solid var(--border-color);
   }
 
   ${mq("tablet_side")} {
-    overflow-y: scroll;
     height: calc(100vh - 80px);
+    overflow-y: scroll;
+    border-top: none;
     border-right: 1px solid var(--border-color);
   }
 `

@@ -42,11 +42,6 @@ module.exports = {
       },
     },
     /**
-     * Image Processing
-     */
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    /**
      * SEO
      */
     `gatsby-plugin-react-helmet-async`
