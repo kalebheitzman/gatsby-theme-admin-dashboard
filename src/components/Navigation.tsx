@@ -42,23 +42,31 @@ const Navigation = ({ navigation }: NavigationProps) => {
 export default Navigation
 
 // navlink component
-const NavLink = ({ link }) => (
-  <li>
-    <Link
-      to={link.to}
-      activeClassName="active"
-      partiallyActive={link.partiallyActive}
-    >
-      <FontAwesomeIcon
-        icon={link.icon}
-        fixedWidth
-        aria-hidden="true"
-        title={link.title}
-      />
-      <div className="label">{link.title}</div>
-    </Link>
-  </li>
-)
+const NavLink = ({ link }) => {
+
+  return (
+    <li>
+      <Link
+        to={link.to}
+        activeClassName="active"
+        partiallyActive={link.partiallyActive}
+        onClick={() => {
+          if (link.cb !== undefined) {
+            return link.cb()
+          }
+        }}
+      >
+        <FontAwesomeIcon
+          icon={link.icon}
+          fixedWidth
+          aria-hidden="true"
+          title={link.title}
+        />
+        <div className="label">{link.title}</div>
+      </Link>
+    </li>
+  )
+}
 
 // navigation component
 const StyledNavigation = styled.div`
