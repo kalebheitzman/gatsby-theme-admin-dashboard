@@ -17,15 +17,13 @@ export default ({ children }: Children) => {
 // sidebar component
 const Sidebar = styled.div`
   grid-area: sidebar;
-  padding: 1rem;
 
   ${mq("tablet_up")} {
-    padding: 2rem;
     border-top: 1px solid var(--border-color);
   }
 
   ${mq("tablet_side")} {
-    height: calc(100vh - 80px);
+    height: calc(100vh - 160px);
     overflow-y: scroll;
     border-top: none;
     border-right: 1px solid var(--border-color);

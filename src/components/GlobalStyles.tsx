@@ -63,6 +63,10 @@ export default () => {
           --form-disabled-color: ${darkMode ? "#444" : "#ccc"};
           --form-enabled-color: ${darkMode ? "#eee" : "#fff"};
           --form-button-background: ${darkMode ? "#009965" : "#009965"};
+
+          // list colors
+          --list-header-background: ${darkMode ? "#2f2f2f" : "#efefef"};
+          --list-header-background-callout: ${darkMode ? "#3f3f3f" : "#e7e7e7"};
         }
 
         html {
