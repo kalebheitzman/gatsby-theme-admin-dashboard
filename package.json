@@ -44,6 +44,7 @@
     "gatsby-plugin-sharp": "^2.12.2",
     "gatsby-plugin-typography": "^2.10.0",
     "gatsby-source-filesystem": "^2.9.1",
+    "gatsby-theme-auth0": "^1.1.1",
     "gatsby-transformer-sharp": "^2.10.1",
     "hamburger-react": "^2.4.0",
     "react-helmet-async": "^1.0.7",

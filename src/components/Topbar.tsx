@@ -2,6 +2,7 @@
 import React from "react"
 
 // import components
+import User from "./User"
 import DarkMode from "./DarkMode"
 
 // import styles
@@ -12,6 +13,7 @@ export default () => {
   return (
     <Topbar>
       <DarkMode />
+      <User />
     </Topbar>
   )
 }

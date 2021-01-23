@@ -34,6 +34,7 @@ export default () => {
             : "rgba(255, 255, 255, 0.75)"};
 
           // logo colors
+          --logo-hover: ${darkMode ? "#0087d3" : "#0087d3"};
           --logo-background: ${darkMode ? "#0069b4" : "#0069b4"};
           --logo-color: ${darkMode ? "#fff" : "#fff"};
 
