@@ -1,5 +1,9 @@
 // import libs
-import React from "react"
+import React, { useContext, useEffect } from "react"
+import { AuthService } from "gatsby-theme-auth0"
+
+// import components
+import Context from "./Context"
 
 // import styles
 import styled from "@emotion/styled"
@@ -15,6 +19,13 @@ const Profile = ({ user }: ProfileProps) => {
     name,
     picture
   } = user
+
+  const token = AuthService.getAccessToken()
+  const { setToken } = useContext(Context)
+
+  useEffect(() => {
+    setToken(token)
+  }, [token])
 
   return(
     <StyledProfile>

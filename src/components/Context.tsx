@@ -4,19 +4,19 @@ import { createContext } from "react"
 // types
 type InitialState = {
   darkMode: boolean
-  setDarkMode: any
+  setDarkMode?: any
   toggle: boolean
-  setToggle: any,
+  setToggle?: any,
   navigation: any,
-  setNavigation: any
+  setNavigation?: any,
+  token?: any,
+  setToken?: any
 }
 
 // initial state
 export const initialState: InitialState = {
   darkMode: false,
-  setDarkMode: null,
   toggle: false,
-  setToggle: null,
   navigation: [
     {
       title: "Home",
@@ -25,7 +25,6 @@ export const initialState: InitialState = {
       partiallyActive: false,
     },
   ],
-  setNavigation: null
 }
 
 export const Context = createContext(initialState)

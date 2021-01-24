@@ -12,7 +12,7 @@ module.exports = {
         domain: process.env.AUTH0_DOMAIN,
         clientID: process.env.AUTH0_CLIENT_ID,
         redirectUri: process.env.AUTH0_CALLBACK_URL,
-        // audience: process.env.AUTH0_AUDIENCE, // Optional
+        audience: process.env.AUTH0_AUDIENCE, // Optional
         // responseType: process.env.AUTH0_RESPONSE_TYPE, // Optional
         // scope: process.env.AUTH0_SCOPE, // Optional
         // callbackPath: "/auth/callback", // Optional

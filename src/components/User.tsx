@@ -11,8 +11,6 @@ import styled from "@emotion/styled"
 const User = () => {
   const { isLoggedIn, profile } = useAuth()
 
-  console.log(profile)
-
   return(
     <StyledUser>
       {isLoggedIn ? (
