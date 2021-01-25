@@ -50,7 +50,7 @@ export const Layout = ({ children, title }) => {
       <Topbar />
       <Navigation navigation={navigation} />
       <Main>{children}</Main>
-      <Footer siteMetadata={siteMetadata} />
+      {/* <Footer siteMetadata={siteMetadata} /> */}
     </StyledLayout>
   )
 }
@@ -63,11 +63,10 @@ const StyledLayout = styled.div`
   grid-template-areas:
     "logo       logo       topbar"
     "main       main       main"
-    "footer     footer     footer"
     "sidebar    sidebar    sidebar"
     "navigation navigation toggle";
   grid-template-columns: 80px 1fr 90px;
-  grid-template-rows: 80px 1fr 80px 0 80px;
+  grid-template-rows: 80px 1fr 0 80px;
   height: 100vh;
   min-height: 100vh;
   min-height: -webkit-fill-available;
@@ -82,10 +81,9 @@ const StyledLayout = styled.div`
   ${mq("tablet_up")} {
     grid-template-areas:
       "toggle     logo    topbar"
-      "navigation main    main"
-      "navigation footer  footer";
+      "navigation main    main";
     grid-template-columns: 100px var(--sidebar-width) 1fr;
-    grid-template-rows: 80px 1fr 80px;
+    grid-template-rows: 80px 1fr;
   }
 `
 
@@ -97,6 +95,6 @@ export const Main = styled.main`
   overflow: hidden;
 
   ${mq("tablet_up")} {
-    height: calc(100vh - 160px);
+    height: calc(100vh - 80px);
   }
 `
