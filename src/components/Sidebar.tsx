@@ -20,11 +20,11 @@ const Sidebar = styled.div`
 
   ${mq("tablet_up")} {
     border-top: 1px solid var(--border-color);
+    height: calc(100vh - 160px);
+    overflow-y: scroll;
   }
 
   ${mq("tablet_side")} {
-    height: calc(100vh - 80px);
-    overflow-y: scroll;
     border-top: none;
     border-right: 1px solid var(--border-color);
   }

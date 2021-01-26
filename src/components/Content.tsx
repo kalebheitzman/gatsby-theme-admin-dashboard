@@ -25,7 +25,8 @@ const Content = styled.div`
 
   ${mq("tablet_side")} {
     overflow-y: scroll;
-    height: calc(100vh - 80px);
+    height: fill-available;
+    height: 100%;
     border-right: 1px solid var(--border-color);
   }
 `
