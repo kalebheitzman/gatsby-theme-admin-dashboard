@@ -10,13 +10,16 @@ type InitialState = {
   navigation: any,
   setNavigation?: any,
   token?: any,
-  setToken?: any
+  setToken?: any,
+  user?: any,
+  setUser?: any
 }
 
 // initial state
 export const initialState: InitialState = {
   darkMode: false,
   toggle: false,
+  user: null,
   navigation: [
     {
       title: "Home",

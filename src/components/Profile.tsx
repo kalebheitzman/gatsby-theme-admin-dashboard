@@ -21,10 +21,12 @@ const Profile = ({ user }: ProfileProps) => {
   } = user
 
   const token = AuthService.getAccessToken()
-  const { setToken } = useContext(Context)
+  const userProfile = AuthService.getUserProfile()
+  const { setToken, setUser } = useContext(Context)
 
   useEffect(() => {
     setToken(token)
+    setUser(userProfile)
   }, [token])
 
   return(

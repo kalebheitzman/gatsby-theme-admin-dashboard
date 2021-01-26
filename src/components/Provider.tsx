@@ -10,6 +10,7 @@ export default ({ children }) => {
   const [toggle, setToggle] = useState(initialState.toggle)
   const [navigation, setNavigation] = useState(initialState.navigation)
   const [token, setToken] = useState(null)
+  const [user, setUser] = useState(initialState.user)
 
   // get initial dark mode
   useEffect(() => {
@@ -41,7 +42,8 @@ export default ({ children }) => {
         darkMode, setDarkMode,
         toggle, setToggle,
         navigation, setNavigation,
-        token, setToken
+        token, setToken,
+        user, setUser
       }}
     >
       {children}
